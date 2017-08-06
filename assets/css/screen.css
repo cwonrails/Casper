@@ -712,6 +712,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 If an image url has #full on the end, give it special wide styles.
 Super neat trick courtesy of @JoelDrapper
 */
+
 .post-full-content img[src$="#full"] {
     width: 100vw;
     max-width: none;
