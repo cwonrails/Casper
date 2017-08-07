@@ -2,19 +2,15 @@
 <html>
 <head>
 
-    {{!-- Document Settings --}}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    {{!-- Base Meta --}}
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
-    {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
 </head>
@@ -40,7 +36,6 @@
 
     </div>
 
-    {{!-- The big email subscribe modal content --}}
     {{#if @labs.subscribers}}
     <div id="subscribe" class="subscribe-overlay">
         <a class="subscribe-overlay-close" href="#"></a>
@@ -55,13 +50,8 @@
     </div>
     {{/if}}
 
-    {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"</script>
+    <script src="{{asset "js/jquery.fitvids.js"}}"></script>
 
     {{#if pagination.pages}}
     <script>
