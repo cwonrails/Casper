@@ -1,8 +1,7 @@
 {{!< default}}
-{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{#author}}
-{{!-- Everything inside the #author tags pulls data from the author --}}
+
 <header class="site-header outer {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}">
     <div class="inner">
         {{> "site-nav"}}
@@ -37,14 +36,12 @@
 </header>
 {{/author}}
 
-{{!-- The main content area --}}
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
         <div class="post-feed">
             {{#foreach posts}}
 
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
 
             {{/foreach}}
