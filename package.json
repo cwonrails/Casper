@@ -1,6 +1,6 @@
 {
   "name": "cwoncasper",
-  "description": "Personal spin on the Ghost default theme",
+  "description": "Personal spin on Ghost's default theme",
   "version": "1.0.0",
   "engines": {
     "ghost": ">=1.0.0"
