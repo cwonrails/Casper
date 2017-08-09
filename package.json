@@ -1,10 +1,8 @@
 {
   "name": "cwoncasper",
-  "description": "Personal spin on the Ghost default theme",
+  "description": "Personal spin on Ghost's default theme",
   "version": "1.0.0",
-  "engines": {
-    "ghost": ">=1.0.0"
-  },
+  "private": "true",
   "license": "MIT",
   "author": {
     "name": "Chris Watson",
@@ -27,6 +25,7 @@
     "gulp-watch": "4.3.11",
     "postcss-color-function": "4.0.0",
     "postcss-custom-properties": "6.1.0",
+    "postcss-easy-import": "^2.1.0",
     "standard": "^10.0.3",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0"

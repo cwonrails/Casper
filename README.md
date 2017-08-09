@@ -1,5 +1,5 @@
 # cwoncasper
 
-Personal spin of the [default theme](https://github.com/tryghost/casper) for [Ghost](http://github.com/tryghost/ghost/). 
+Personal spin on [Ghost](http://github.com/tryghost/ghost/)'s [default theme](https://github.com/tryghost/casper).
 
-See it in action on [my website](https://chriswatson.io).
+Visit my [website](https://chriswatson.io) to see it in action.
