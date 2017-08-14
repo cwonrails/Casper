@@ -4,7 +4,6 @@
   "version": "2.0.0",
   "private": "true",
   "license": "MIT",
-
   "author": {
     "name": "Chris Watson",
     "email": "cmwatson@gmail.com",
@@ -15,7 +14,7 @@
     "url": "https://github.com/cwonrails/cwoncasper"
   },
   "engines": {
-      "ghost": ">=1.2.0"
+    "ghost": ">=1.2.0"
   },
   "config": {
     "posts_per_page": 25
