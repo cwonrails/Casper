@@ -6,6 +6,7 @@ var livereload = require('gulp-livereload')
 var nodemon = require('gulp-nodemon')
 var postcss = require('gulp-postcss')
 var sourcemaps = require('gulp-sourcemaps')
+var zip = require('gulp-zip')
 
 // postcss plugins
 var autoprefixer = require('autoprefixer')
@@ -51,4 +52,17 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['build'], function () {
   gulp.start('watch')
+})
+
+gulp.task('zip', function () {
+  return gulp.src([
+    'assets',
+    '*.hbs',
+    'partials'
+  ],
+    {
+      base: './'
+    })
+  .pipe(zip('cwoncasper.zip'))
+  .pipe(gulp.dest('dist/'))
 })
