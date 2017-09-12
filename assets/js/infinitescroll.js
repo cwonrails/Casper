@@ -35,7 +35,7 @@ $(function ($) {
   }
 
   function infiniteScroll () {
-        // return if already loading
+    // return if already loading
     if (isLoading) {
       return
     }

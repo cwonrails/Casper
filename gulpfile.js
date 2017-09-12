@@ -37,32 +37,33 @@ gulp.task('css', function () {
     autoprefixer({browsers: ['last 2 versions']}),
     cssnano()
   ]
-  gulp.src('assets/css/*.css')
-        .on('error', swallowError)
-        .pipe(sourcemaps.init())
-        .pipe(postcss(processors))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/built/'))
-        .pipe(livereload())
+  return gulp.src('assets/css/*.css')
+    .on('error', swallowError)
+    .pipe(sourcemaps.init())
+    .pipe(postcss(processors))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('assets/built/'))
+    .pipe(livereload())
 })
 
 gulp.task('watch', function () {
   gulp.watch('assets/css/**', ['css'])
 })
 
-gulp.task('default', ['build'], function () {
-  gulp.start('watch')
+gulp.task('zip', ['css'], function () {
+  return gulp.src([
+    'assets/**/*',
+    '*.hbs',
+    'partials/**/*',
+    'package.json'
+  ],
+  {
+    base: './'
+  })
+    .pipe(zip('cwoncasper.zip'))
+    .pipe(gulp.dest('dist/'))
 })
 
-gulp.task('zip', function () {
-  return gulp.src([
-    'assets',
-    '*.hbs',
-    'partials'
-  ],
-    {
-      base: './'
-    })
-  .pipe(zip('cwoncasper.zip'))
-  .pipe(gulp.dest('dist/'))
+gulp.task('default', ['build'], function () {
+  gulp.start('watch')
 })
