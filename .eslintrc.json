@@ -1,6 +1,8 @@
 {
   "extends": "standard",
   "env": {
-    "jquery": "true"
+    "browser": "true",
+    "jquery": "true",
+    "node": "true"
   }
 }
