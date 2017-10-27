@@ -1,7 +1,5 @@
 {{!< default}}
 
-{{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
 
 <header class="site-header outer">
     <div class="inner">
@@ -9,7 +7,6 @@ into the {body} of the default.hbs template --}}
     </div>
 </header>
 
-{{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
 <main id="site-main" class="site-main outer" role="main">
@@ -35,8 +32,7 @@ into the {body} of the default.hbs template --}}
             <section class="post-full-content">
                 {{content}}
             </section>
-
-            {{!-- Email subscribe form at the bottom of the page --}}
+            {{!--
             {{#if @labs.subscribers}}
             <section class="subscribe-form">
                 <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
@@ -44,9 +40,9 @@ into the {body} of the default.hbs template --}}
                 {{subscribe_form placeholder="youremail@example.com"}}
             </section>
             {{/if}}
+            --}}
 
             <footer class="post-full-footer">
-                {{!-- Everything inside the #author tags pulls data from the author --}}
                 {{#author}}
 
                 <section class="author-card">
@@ -97,7 +93,6 @@ into the {body} of the default.hbs template --}}
     </div>
 </main>
 
-{{!-- Links to Previous/Next posts --}}
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
@@ -134,12 +129,10 @@ into the {body} of the default.hbs template --}}
             {{/get}}
             {{/if}}
 
-            {{!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs --}}
             {{#next_post}}
                 {{> "post-card"}}
             {{/next_post}}
 
-            {{!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs --}}
             {{#prev_post}}
                 {{> "post-card"}}
             {{/prev_post}}
@@ -148,12 +141,10 @@ into the {body} of the default.hbs template --}}
     </div>
 </aside>
 
-{{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
 {{> floating-header}}
 
 {{/post}}
 
-{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
 <script>
 
